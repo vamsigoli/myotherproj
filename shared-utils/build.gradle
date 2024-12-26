@@ -1,0 +1,13 @@
+plugins {
+    id 'java-library'
+}
+
+
+//had we used the other way of building multi module project as given in the youtube examples
+//using my-build-logic we could have made the plugins available to myotherproj also just by
+//having pluginManagement section of myotherproj settings.gradle include the reference to the
+//my-build-logic as includeBuild("../my-build-logic")
+
+//for now, define the project group manually again
+//this is required to refer to the shared-module as a dependency in the dependent projects
+group = 'com.vamsi.my-app'
